@@ -2,9 +2,16 @@
 const http = require('http');
 const {handleReqRes} = require('./helpers/handleReqRes')
 const enviroment = require('./helpers/enviroment');
+const data = require('./lib/data')
 
 // app object - module scaffolding.
 const app = {};
+
+
+//testing file system
+data.create('test', 'newFile', {'name': 'bangladesh', 'language': 'bangla'}, function(err){
+    console.log("error", err);
+})
 
 
 // configuration
